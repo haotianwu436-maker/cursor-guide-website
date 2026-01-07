@@ -8,15 +8,6 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ open, onClose }: SidebarProps) {
-  const categories = {
-    quickstart: "快速开始",
-    prompts: "提示词",
-    tips: "技巧",
-    workflow: "工作流程",
-    templates: "模板",
-    faq: "常见问题",
-  };
-
   return (
     <>
       {/* Mobile overlay */}
@@ -55,6 +46,28 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           </nav>
 
           <div className="mt-8 pt-6 border-t border-border">
+            <h3 className="text-xs font-semibold text-muted-foreground uppercase mb-3">
+              其他
+            </h3>
+            <div className="space-y-1">
+              <Link
+                href="/faq"
+                onClick={onClose}
+                className="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors"
+              >
+                常见问题
+              </Link>
+              <Link
+                href="/prompts"
+                onClick={onClose}
+                className="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors"
+              >
+                提示词库
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-border">
             <h3 className="text-xs font-semibold text-muted-foreground uppercase mb-3">
               功能分类
             </h3>

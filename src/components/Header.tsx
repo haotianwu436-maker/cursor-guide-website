@@ -23,6 +23,9 @@ export default function Header({ onMenuClick }: HeaderProps) {
           <Link href="/prompts" className="text-sm hover:text-primary transition-colors">
             提示词库
           </Link>
+          <Link href="/faq" className="text-sm hover:text-primary transition-colors">
+            常见问题
+          </Link>
           <a
             href="https://github.com/haotianwu436-maker/personal-portfolio"
             target="_blank"

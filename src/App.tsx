@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import GuideDetail from "./pages/GuideDetail";
 import PromptLibrary from "./pages/PromptLibrary";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" component={Home} />
             <Route path="/guide/:id" component={GuideDetail} />
             <Route path="/prompts" component={PromptLibrary} />
+            <Route path="/faq" component={FAQ} />
             <Route component={NotFound} />
           </Switch>
         </main>

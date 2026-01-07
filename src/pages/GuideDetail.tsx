@@ -32,26 +32,26 @@ export default function GuideDetail() {
             <p className="text-lg text-muted-foreground">{guide.description}</p>
           </header>
 
-          <div className="prose max-w-none">
+              <div className="prose max-w-none">
             <ReactMarkdown
               components={{
-                h2: ({ children }) => (
+                h2: ({ children }: any) => (
                   <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>
                 ),
-                h3: ({ children }) => (
+                h3: ({ children }: any) => (
                   <h3 className="text-xl font-bold mt-6 mb-3">{children}</h3>
                 ),
-                p: ({ children }) => (
+                p: ({ children }: any) => (
                   <p className="mb-4 leading-relaxed">{children}</p>
                 ),
-                ul: ({ children }) => (
+                ul: ({ children }: any) => (
                   <ul className="list-disc list-inside mb-4 space-y-2">{children}</ul>
                 ),
-                ol: ({ children }) => (
+                ol: ({ children }: any) => (
                   <ol className="list-decimal list-inside mb-4 space-y-2">{children}</ol>
                 ),
-                li: ({ children }) => <li className="ml-4">{children}</li>,
-                code: ({ inline, children }) =>
+                li: ({ children }: any) => <li className="ml-4">{children}</li>,
+                code: ({ inline, children }: any) =>
                   inline ? (
                     <code className="bg-muted px-2 py-1 rounded text-sm font-mono text-accent">
                       {children}
@@ -61,8 +61,8 @@ export default function GuideDetail() {
                       {children}
                     </code>
                   ),
-                pre: ({ children }) => <pre className="mb-4">{children}</pre>,
-                blockquote: ({ children }) => (
+                pre: ({ children }: any) => <pre className="mb-4">{children}</pre>,
+                blockquote: ({ children }: any) => (
                   <blockquote className="border-l-4 border-primary pl-4 py-2 my-4 italic text-muted-foreground">
                     {children}
                   </blockquote>
